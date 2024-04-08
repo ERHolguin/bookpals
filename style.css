@@ -8,14 +8,12 @@ ul {
 }
 
 
-
-
 /*......................body..........................*/
 
 .main-container {
     display: grid;
-    grid-template-rows: 0.25fr 0.25fr 4fr;
     grid-template-columns: 1fr 3fr 1fr;
+
 }
 
 /*......................header..........................*/
@@ -25,6 +23,8 @@ ul {
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 4;
+
+    background-color: white;
 
 }
 
@@ -36,6 +36,9 @@ ul {
     grid-column-start: 2;
     grid-column-end: 4;
 
+    background-color: white;
+
+
 }
 
 /*......................dashboard..........................*/
@@ -46,6 +49,10 @@ ul {
     grid-column-start: 1;
     grid-column-end: 2;
 
+    background-color: #B0A2F9;
+    border: 1px solid #B0A2F9;
+
+
 }
 
 /*......................your-collection..........................*/
@@ -55,14 +62,17 @@ ul {
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 3;
-    
+
+    background-color: #EEEEEE;    
 }
 
 /*......................announcements-and-trending..........................*/
 
--announcements-and-trending {
+.announcements-and-trending {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 3;
     grid-column-end: 4;
+
+    background-color: #EEEEEE;
 }
