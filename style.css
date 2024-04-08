@@ -49,11 +49,29 @@ ul {
     grid-column-start: 1;
     grid-column-end: 2;
 
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
     background-color: #B0A2F9;
     border: 1px solid #B0A2F9;
 
 
 }
+
+.dashboard-menu {
+    
+    display: grid; /* necessary to align log out section to the middle of its container*/
+    grid-template-columns: 1fr;
+}
+
+.dashboard-menu ul {
+    display: grid;
+    grid-template-columns: 1;
+    row-gap: 15px;
+}
+
+
 
 /*......................your-collection..........................*/
 
