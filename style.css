@@ -8,12 +8,13 @@ ul {
 }
 
 
+
 /*......................body..........................*/
 
 .main-container {
     display: grid;
+    /*grid-template-rows: 1fr 4fr;*/
     grid-template-columns: 1fr 3fr 1fr;
-
 }
 
 /*......................header..........................*/
@@ -24,13 +25,117 @@ ul {
     grid-column-start: 2;
     grid-column-end: 4;
 
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap:20px;
+    
     background-color: white;
+    padding: 30px; /* keep elements from touching the borders even if using justify-content: end :) */
 
+}
+
+.page-title {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.search-bar {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    place-self: end;
+
+    width: 80%;
+
+    display: grid;
+    justify-content: stretch; /*search bar fills its container*/
+}
+
+.search-bar input {
+    height: 25px;
+    border: none; /*remove ugly default border */
+    border-radius: 90px;
+    background-color: #EEEEEE;
+}
+
+.search-bar::before {
+    content: '';
+    width: 25px;
+    height: 25px;    
+    display: grid;
+
+}
+
+.search-bar::before {
+    background-image: url(img/magnify.svg);
+
+}
+
+.search-bar input[type="search"]:focus {
+    outline: none; /*remove default border when search bar is clicked on*/
+}
+
+.profile {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    display: grid;
+    justify-content: start;
+
+}
+
+.profile::before {
+    content: '';
+    width: 25px;
+    height: 25px;    
+    display: grid;
+}
+
+.profile::before {
+    background-image: url(img/face-woman-profile.svg);
+
+}
+
+.nav-buttons {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    gap: 50px;
+    justify-content: end;
+}
+
+.new,
+.share,
+.upload {
+    background-color: #ffd23d;
+    border: none;
+    border-radius: 90px;
+    padding: 7px;
+    width: 80px;
+    height: auto;
+
+
+    display: flex;
+    justify-content: center;
 }
 
 /*......................nav..........................*/
 
-.nav {
+/*.nav {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
@@ -39,7 +144,7 @@ ul {
     background-color: white;
 
 
-}
+}*/
 
 /*......................dashboard..........................*/
 
@@ -59,16 +164,69 @@ ul {
 
 }
 
-.dashboard-menu {
+.dashboard-menu-one,
+.dashboard-menu-two,
+.dashboard-menu-three {
     
     display: grid; /* necessary to align log out section to the middle of its container*/
     grid-template-columns: 1fr;
 }
 
-.dashboard-menu ul {
+.dashboard-menu-one ul,
+.dashboard-menu-two ul,
+.dashboard-menu-three ul {
     display: grid;
     grid-template-columns: 1;
     row-gap: 15px;
+}
+
+.dashboard-menu-one li::before,
+.dashboard-menu-two li::before,
+.dashboard-menu-three li::before {
+    content: '';
+    width: 25px;
+    height: 25px;    
+    display: inline-block;
+}
+
+.dashboard-menu-one li:nth-child(1):before {
+    background-image: url(img/view-dashboard.svg);
+}
+
+.dashboard-menu-one li:nth-child(2):before {
+    background-image: url(img/home-outline.svg);
+}
+
+.dashboard-menu-one li:nth-child(3):before {
+    background-image: url(img/message-reply.svg);
+}
+
+.dashboard-menu-one li:nth-child(4):before {
+    background-image: url(img/history.svg);
+}
+
+.dashboard-menu-one li:nth-child(5):before {
+    background-image: url(img/bookshelf.svg);
+}
+
+.dashboard-menu-one li:nth-child(6):before {
+    background-image: url(img/account-group.svg);
+}
+
+.dashboard-menu-two li:nth-child(1):before {
+    background-image: url(img/cog.svg);
+}
+
+.dashboard-menu-two li:nth-child(2):before {
+    background-image: url(img/file-question.svg);
+}
+
+.dashboard-menu-two li:nth-child(3):before {
+    background-image: url(img/shield-check.svg);
+}
+
+.dashboard-menu-three li:nth-child(1):before {
+    background-image: url(img/logout.svg);
 }
 
 
@@ -76,13 +234,80 @@ ul {
 /*......................your-collection..........................*/
 
 .your-collection {
+    box-sizing: border-box;
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 3;
 
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+
     background-color: #EEEEEE;    
+    padding: 15px;
+   /* margin-top: 0; /*remove extra spacing b/t section title and cards*/
 }
+
+.bookshelf {
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.bookshelf .book-card {
+    box-sizing: border-box;
+
+    background-color: #FFFFFF;
+    height: 250px;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+
+}
+
+.book-cover {
+    box-sizing: border-box;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    display: grid;
+    justify-content: center;
+    place-content: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.book-details {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    display: grid;
+    justify-content: start;
+    row-gap: 5px;
+
+    background-color: #FFFFFF;
+}
+
+
+/*.book-details {
+    background-color: #FFFFFF;
+}*/
+
+
 
 /*......................announcements-and-trending..........................*/
 
@@ -92,5 +317,81 @@ ul {
     grid-column-start: 3;
     grid-column-end: 4;
 
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+
     background-color: #EEEEEE;
+    padding: 15px;
+}
+
+.announcements {
+    box-sizing: border-box;
+
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+}
+
+/*.annnouncement-one,
+.annnouncement-two,
+.annnouncement-three {
+  place-self: center;
+
+  width: 80%;
+}*/
+
+.custom-hr {
+    width: 80%;
+    font-size: 1px;
+    color: rgba(0, 0, 0, 0);
+    line-height: 1px;
+
+    background-color: #EEEEEE;
+    margin-top: -6px;
+    margin-bottom: 10px;
+}
+
+.trending {
+    box-sizing: border-box;
+
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.trending ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+}
+
+.trending li::before {
+    content: '';
+    width: 25px;
+    height: 25px;    
+    display: grid;
+}
+
+.trending li:nth-child(1):before {
+    background-image: url(img/face-man-profile.svg);
+}
+
+.trending li:nth-child(2):before {
+    background-image: url(img/gender-non-binary.svg);
+}
+
+.trending li:nth-child(3):before {
+    background-image: url(img/face-man-profile.svg);
+}
+
+.trending li:nth-child(4):before {
+    background-image: url(img/face-woman-profile.svg);
 }

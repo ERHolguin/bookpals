@@ -10,34 +10,35 @@
    <div class="main-container">
 
     <div class="header">
-        <h2 class="dashboard-title">Dashboard</h2>
+        <div class="page-title">
+            <h2 class="dashboard-title">Dashboard</h2>
+        </div>
         <div class="search-bar">
             <label for="site_search"></label>
             <input type="search" id="site_search" name="site_seaarch" value="">
         </div>
-    </div>     
 
-    <div class="nav">
         <div class="profile">
             <p class="greeting">Hi there, </p>
             <p class="user-name">Jane Victorian (@cooljane)</p>
         </div>
         
         <div class="nav-buttons">   
-            <ul>
-                <li class="new">new</li>
-                <li class="upload">upload</li>
-                <li class="share">share</li>
-            </ul>
+            <button class="new">New</button>
+            <button class="upload">Upload</button>
+            <button class="share">Share</button>
         </div> 
-    </div>
+    </div>     
+
+        
+    
         
     <div class="dashboard">
         <div class="logo">
             <img src="img/pals.png" alt="bookpals logo">
         </div>
 
-        <div class="dashboard-menu">
+        <div class="dashboard-menu-one">
             <ul>
                 <li>Dashboard</li>
                 <li>Home</li>
@@ -48,7 +49,7 @@
             </ul>
         </div>
 
-        <div class="dashboard-menu">
+        <div class="dashboard-menu-two">
             <ul>
                 <li>Settings</li>
                 <li>Support</li>
@@ -56,7 +57,7 @@
             </ul>
         </div>
 
-        <div class="dashboard-menu">
+        <div class="dashboard-menu-three">
             <ul>
                 <li>Log out</li>
             </ul>
@@ -64,52 +65,131 @@
 
     </div>
 
-    <div class="your-collection">
-        <h4>Your Collection</h4>
-        <div class="book-card"><h5>Book1</h5></div>
-        <div class="book-card"><h5>Book2</h5></div>
-        <div class="book-card"><h5>Book3</h5></div>
-        <div class="book-card"><h5>Book4</h5></div>
-        <div class="book-card"><h5>Book5</h5></div>
-        <div class="book-card"><h5>Book6</h5></div>
+    <div class="your-collection">    
+        <h3 class="your-collection-title">Your Collection</h3>    
+        <div class="bookshelf">
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <div>
+                        <img class="book-cover-photo" src="#" alt="Book Cover Photo">
+                    </div>
+                </div>
+                <div class="book-details">
+                    <h4 class="book-title">Book Title</h4>
+                    <h5 class="book-author">Book Author</h5>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <div>
+                        <img src="#" alt="Book Cover Photo">
+                    </div>
+                </div>
+                <div class="book-details">
+                    <h4 class="book-title">Book Title</h4>
+                    <h5 class="book-author">Book Author</h5>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <div>
+                        <img src="#" alt="Book Cover Photo">
+                    </div>
+                </div>
+                <div class="book-details">
+                    <h4 class="book-title">Book Title</h4>
+                    <h5 class="book-author">Book Author</h5>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <div>
+                        <img src="#" alt="Book Cover Photo">
+                    </div>
+                </div>
+                <div class="book-details">
+                    <h4 class="book-title">Book Title</h4>
+                    <h5 class="book-author">Book Author</h5>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <div>
+                        <img src="#" alt="Book Cover Photo">
+                    </div>
+                </div>
+                <div class="book-details">
+                    <h4 class="book-title">Book Title</h4>
+                    <h5 class="book-author">Book Author</h5>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <div>
+                        <img src="#" alt="Book Cover Photo">
+                    </div>
+                </div>
+                <div class="book-details">
+                    <h4 class="book-title">Book Title</h4>
+                    <h5 class="book-author">Book Author</h5>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <div class="announcements-and-trending">
-        <h4>Announcements</h4>
+        <h3>Announcements</h3>
         <div class="announcements">
-            <h5>Site Maintenance</h5>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Unde ducAdipisci, voluptas dolorem! Quod, error labore porro
-                     quibusdam qui eveniet iusto impedit ducimus illum ipsa?</p>
-                        <div class="custom-hr">.</div>
-            <h5>Community Share Day</h5>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Unde ducAdipisci, voluptas dolorem! Quod, error labore porro
-                 quibusdam qui eveniet iusto impedit ducimus illum ipsa?</p>
-                    <div class="custom-hr">.</div>
-            <h5>Updated Privacy Policy</h5>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Unde ducAdipisci, voluptas dolorem! Quod, error labore porro
-                 quibusdam qui eveniet iusto impedit ducimus illum ipsa?</p>
+            <div class="announcement-one">
+                <h5>Site Maintenance</h5>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Unde ducAdipisci, voluptas dolorem! Quod, error labore.</p>
+            </div> 
+
+        <div class="custom-hr">.</div>
+
+            <div class="announcement-two">
+                <h5>Community Share Day</h5>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Unde ducAdipisci, voluptas dolorem! Quod, error labore.</p>
+            </div>
+        
+        <div class="custom-hr">.</div>
+
+            <div class="announcement-three">
+                <h5>Updated Privacy Policy</h5>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Unde ducAdipisci, voluptas dolorem! Quod, error labore.</p>
+            </div>
         </div>
 
-        <h4>Trending</h4>
+        <h3>Trending</h3>
         <div class="trending">
             <ul>
                 <li>
-                    <h6 class="display_name">@hansel</h6>
+                    <h5 class="display_name">@hansel</h5>
                     <p class="user_trend">Uploaded 5 books this week</p>
                 </li>
+
                 <li>
-                    <h6 class="display_name">@coolcat</h6>
+                    <h5 class="display_name">@coolcat</h5>
                     <p class="user_trend">Most viewed</p>
                 </li>
+
                 <li>
-                    <h6 class="display_name">@Thomas</h6>
+                    <h5 class="display_name">@Thomas</h5>
                     <p class="user_trend">Highest rated patron</p>
                 </li>
+
                 <li>
-                    <h6 class="display_name">@skinny</h6>
+                    <h5 class="display_name">@skinny</h5>
                     <p class="user_trend">Reading challenge winner!</p>
                 </li>
             </ul>
