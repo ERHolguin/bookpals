@@ -53,9 +53,11 @@ ul {
     grid-column-end: 3;
     place-self: end;
 
-    width: 80%;
 
     display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
     justify-content: stretch; /*search bar fills its container*/
 }
 
@@ -66,15 +68,13 @@ ul {
     background-color: #EEEEEE;
 }
 
-.search-bar::before {
+.search-bar input::before {
     content: '';
     width: 25px;
     height: 25px;    
-    display: grid;
-
 }
 
-.search-bar::before {
+.search-bar input::before {
     background-image: url(img/magnify.svg);
 
 }
@@ -90,7 +90,10 @@ ul {
     grid-column-end: 2;
 
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-content: start;
+    align-items: end;
 
 }
 
@@ -99,11 +102,21 @@ ul {
     width: 25px;
     height: 25px;    
     display: grid;
+
+    place-self: end;
+    margin-right: 10px;
 }
 
 .profile::before {
     background-image: url(img/face-woman-profile.svg);
 
+}
+
+.user-name {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 .nav-buttons {
@@ -178,6 +191,16 @@ ul {
     display: grid;
     grid-template-columns: 1;
     row-gap: 15px;
+
+}
+
+.dashboard-menu-one li,
+.dashboard-menu-two li,
+.dashboard-menu-three li {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: end; /*bring menu title down, on row to align with svg*/
 }
 
 .dashboard-menu-one li::before,
@@ -186,7 +209,9 @@ ul {
     content: '';
     width: 25px;
     height: 25px;    
-    display: inline-block;
+
+    place-self: end; /*bring svg icons closer to menu items*/
+    margin-right: 10px;
 }
 
 .dashboard-menu-one li:nth-child(1):before {
@@ -373,11 +398,20 @@ ul {
     row-gap: 15px;
 }
 
+.trending li {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: end; /*bring menu title down, on row to align with svg*/
+}
+
 .trending li::before {
     content: '';
     width: 25px;
     height: 25px;    
-    display: grid;
+
+    place-self: end;
+    margin-right: 10px;
 }
 
 .trending li:nth-child(1):before {
@@ -394,4 +428,11 @@ ul {
 
 .trending li:nth-child(4):before {
     background-image: url(img/face-woman-profile.svg);
+}
+
+.user_trend {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
