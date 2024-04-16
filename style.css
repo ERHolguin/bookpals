@@ -52,6 +52,7 @@ ul {
     grid-column-start: 2;
     grid-column-end: 3;
     place-self: end;
+    align-self: center;
 
 
     display: grid;
