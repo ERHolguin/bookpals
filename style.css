@@ -115,6 +115,10 @@ ul {
 
     place-self: end;
     margin-right: 10px;
+
+    background-color: #ffd23d;
+    border: 7px solid #ffd23d;
+    border-radius: 100%;
 }
 
 .profile::before {
@@ -448,18 +452,30 @@ ul {
 
 .trending li:nth-child(1):before {
     background-image: url(img/face-man-profile.svg);
+    background-color: #17b7d9;
+    border: 7px solid #17b7d9;
+    border-radius: 100%;
 }
 
 .trending li:nth-child(2):before {
     background-image: url(img/gender-non-binary.svg);
+    background-color: #ffd23d;
+    border: 7px solid #ffd23d;
+    border-radius: 100%;
 }
 
 .trending li:nth-child(3):before {
     background-image: url(img/face-man-profile.svg);
+    background-color: #c5c3c6;
+    border: 7px solid #c5c3c6;
+    border-radius: 100%;
 }
 
 .trending li:nth-child(4):before {
     background-image: url(img/face-woman-profile.svg);
+    background-color: #b0a2f9;
+    border: 7px solid #b0a2f9;
+    border-radius: 100%;
 }
 
 .user_trend {
