@@ -32,8 +32,8 @@ ul {
     gap:20px;
     
     background-color: white;
-    padding: 30px; /* keep elements from touching the borders even if using justify-content: end :) */
-
+    padding-left: 30px; /* keep elements from touching the borders even if using justify-content: end :) */
+    padding-right: 30px; /* keep elements from touching the borders even if using justify-content: end :) */
 }
 
 .page-title {
@@ -100,8 +100,8 @@ ul {
     grid-column-end: 2;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
     justify-content: start;
     align-items: end;
 
@@ -109,8 +109,8 @@ ul {
 
 .profile::before {
     content: '';
-    width: 25px;
-    height: 25px;    
+    width: 40px;
+    height: 40px;    
     display: grid;
 
     place-self: end;
@@ -127,6 +127,7 @@ ul {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
+    align-self: start;
 }
 
 .nav-buttons {
