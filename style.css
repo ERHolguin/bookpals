@@ -57,25 +57,34 @@ ul {
 
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-
+    grid-template-columns: 1fr 3fr;
     justify-content: stretch; /*search bar fills its container*/
+
+    width: 80%; /*uses 80% of its container's width*/
 }
 
 .search-bar input {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 3; 
+    
     height: 25px;
     border: none; /*remove ugly default border */
     border-radius: 90px;
     background-color: #EEEEEE;
 }
 
-.search-bar input::before {
+.search-bar::before {
     content: '';
     width: 25px;
-    height: 25px;    
+    height: 25px;  
+    
+    place-self: end;
+    margin-right: 10px;
 }
 
-.search-bar input::before {
+.search-bar::before {
     background-image: url(img/magnify.svg);
 
 }
