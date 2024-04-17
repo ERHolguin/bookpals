@@ -178,13 +178,35 @@ ul {
     grid-column-end: 2;
 
     display: grid;
+    grid-template-rows: reapeat(4, 1fr);
+    grid-template-columns: 1fr;
     justify-content: center;
-    align-items: center;
-
+    place-items: center;
     background-color: #B0A2F9;
     border: 1px solid #B0A2F9;
 
 
+}
+
+.dashboard-menu-one {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.dashboard-menu-two {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.dashboard-menu-three {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 .dashboard-menu-one,
@@ -193,23 +215,23 @@ ul {
     
     display: grid; /* necessary to align log out section to the middle of its container*/
     grid-template-columns: 1fr;
+
 }
 
 .dashboard-menu-one ul,
 .dashboard-menu-two ul,
-.dashboard-menu-three ul {
+.dashboard-menu-three ul {    
     display: grid;
     grid-template-columns: 1;
     row-gap: 15px;
-
 }
 
 .dashboard-menu-one li,
 .dashboard-menu-two li,
 .dashboard-menu-three li {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr; /*necessary to define columns so items can be centered properly once icons are added*/
+    grid-template-columns: 1fr 2fr; /*necessary to define columns so items can be centered properly once icons are added*/
     align-items: end; /*bring menu title down, on row to align with svg*/
 }
 
@@ -263,7 +285,6 @@ ul {
 .dashboard-menu-three li:nth-child(1):before {
     background-image: url(img/logout.svg);
 }
-
 
 
 /*......................your-collection..........................*/
