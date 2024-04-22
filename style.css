@@ -468,19 +468,27 @@ li {
     justify-content: center;
 }
 
-.trending-user-one {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
-
+.trending-user-one,
+.trending-user-two,
+.trending-user-three,
+.trending-user-four {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 2fr;
     align-items: center;
 }
 
-.trending-user-details-one {
+.trending-user-one {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.trending-user-details-one,
+.trending-user-details-two,
+.trending-user-details-three,
+.trending-user-details-four {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
@@ -489,7 +497,11 @@ li {
     row-gap: 5px;
 }
 
-.display-name-one {
+.display-name-one,
+.display-name-two,
+.display-name-three,
+.display-name-three
+ {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -497,7 +509,10 @@ li {
     align-self: end;
 }
 
-.user-trend-one {
+.user-trend-one,
+.user-trend-two,
+.user-trend-three,
+.user-trend-four {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
@@ -505,7 +520,7 @@ li {
     align-self: start;
 }
 
-/*.trending-user-two {
+.trending-user-two {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
@@ -527,30 +542,11 @@ li {
 }
 
 
-.trending-user-one,
-.trending-user-two,
-.trending-user-three,
-.trending-user-four {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-    justify-content: center;
-    align-items: center;
-}
 
-
-.trending-details {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    justify-content: center;
-
-    row-gap: 5px;
-}
-  */  
-
-
-.trending-user-one::before {
+.trending-user-one::before,
+.trending-user-two::before,
+.trending-user-three::before,
+.trending-user-four::before {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -581,80 +577,47 @@ li {
     border-radius: 100%;
 }
 
-
-
-/*
-.trending ul {
+.trending-user-two::before {
+    /*must define alignment of bkg img in order to center full element*/
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
-
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr;
-    row-gap: 15px;
-}
-
-.trending li {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    /*align-items: end; bring menu title down, on row to align with svg
-}
+    align-self: center;
 
 
-.trending li::before {
-    content: '';
-    width: 25px;
-    height: 25px;    
-
-    place-self: end;
-    margin-right: 10px;
-}
-
-.trending li:nth-child(1):before {
-    background-image: url(img/face-man-profile.svg);
-    background-color: #17b7d9;
-    border: 7px solid #17b7d9;
-    border-radius: 100%;
-}
-
-.trending li:nth-child(2):before {
     background-image: url(img/gender-non-binary.svg);
     background-color: #ffd23d;
     border: 7px solid #ffd23d;
     border-radius: 100%;
 }
 
-.trending li:nth-child(3):before {
+.trending-user-three::before {
+    /*must define alignment of bkg img in order to center full element*/
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+
+
     background-image: url(img/face-man-profile.svg);
     background-color: #c5c3c6;
     border: 7px solid #c5c3c6;
     border-radius: 100%;
 }
 
-.trending li:nth-child(4):before {
+.trending-user-four::before {
+    /*must define alignment of bkg img in order to center full element*/
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+
+
     background-image: url(img/face-woman-profile.svg);
     background-color: #b0a2f9;
     border: 7px solid #b0a2f9;
     border-radius: 100%;
 }
-*/
-
-/*
-.display_name {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    align-self: end;
-}
-
-.user_trend {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    align-self: start;
-}*/
