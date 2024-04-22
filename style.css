@@ -35,6 +35,7 @@ li {
     
     background-color: white;
     padding: 15px 40px; /* keep elements from touching the borders even if using justify-content: end :) */
+    /*box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);*/
 }
 
 .page-title {
@@ -58,7 +59,7 @@ li {
 
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3fr 1fr;
     justify-content: stretch; /*search bar fills its container*/
 
     width: 80%; /*uses 80% of its container's width*/
@@ -77,20 +78,62 @@ li {
 }
 
 .search-bar::before {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: end;
+
     content: '';
     width: 25px;
     height: 25px;  
     
-    place-self: end;
     margin-right: 10px;
 }
 
 .search-bar::before {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: end;
+
     background-image: url(img/magnify.svg);
 
 }
 
+.search-bar::after {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    align-self: center;
+    justify-self: start;
+    margin-left: 10px;
+
+    content: '';
+    width: 25px;
+    height: 25px;  
+    
+}
+
+.search-bar::after {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    align-self: center;
+    justify-self: start;
+
+    background-image: url(img/bell-ring-outline.svg);
+
+}
+
 .search-bar input[type="search"]:focus {
+    place-self: center;
+    
     outline: none; /*remove default border when search bar is clicked on*/
 }
 
@@ -213,10 +256,11 @@ li {
     grid-column-end: 2;
 
     display: grid;
-    grid-template-rows: reapeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
     justify-content: center;
     place-items: center;
+
     background-color: #B0A2F9;
     border: 1px solid #B0A2F9;
 
