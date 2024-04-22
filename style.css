@@ -34,7 +34,7 @@ li {
     gap:20px;
     
     background-color: white;
-    padding: 15px; /* keep elements from touching the borders even if using justify-content: end :) */
+    padding: 15px 40px; /* keep elements from touching the borders even if using justify-content: end :) */
 }
 
 .page-title {
