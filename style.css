@@ -354,7 +354,7 @@ li {
 }
 
 .your-collection-title {
-    padding: 15px;
+    padding: 15px 15px 15px 0px;
 }
 
 .bookshelf {
@@ -452,7 +452,7 @@ li {
 }
 
 .announcements-section-title {
-    padding: 15px;
+    padding: 15px 15px 15px 0px;
 }
 
 .custom-hr {
@@ -467,7 +467,7 @@ li {
 }
 
 .trending-section-title {
-  padding: 30px 15px 15px 15px;
+  padding: 30px 15px 15px 0px;
 }
 
 .trending {
@@ -483,6 +483,7 @@ li {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
+    row-gap: 15px;
     justify-content: center;
 }
 
