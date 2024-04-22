@@ -247,7 +247,8 @@ li {
 .dashboard-menu-one,
 .dashboard-menu-two,
 .dashboard-menu-three {
-    
+    justify-self: start;
+
     display: grid; /* necessary to align log out section to the middle of its container*/
     grid-template-columns: 1fr;
 
