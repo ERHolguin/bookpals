@@ -353,6 +353,10 @@ li {
    /* margin-top: 0; /*remove extra spacing b/t section title and cards*/
 }
 
+.your-collection-title {
+    padding: 15px;
+}
+
 .bookshelf {
     box-sizing: border-box;
 
@@ -447,13 +451,9 @@ li {
     row-gap: 15px;
 }
 
-/*.annnouncement-one,
-.annnouncement-two,
-.annnouncement-three {
-  place-self: center;
-
-  width: 80%;
-}*/
+.announcements-section-title {
+    padding: 15px;
+}
 
 .custom-hr {
     width: 80%;
@@ -467,9 +467,7 @@ li {
 }
 
 .trending-section-title {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    align-self: end;
+  padding: 30px 15px 15px 15px;
 }
 
 .trending {
@@ -560,8 +558,6 @@ li {
     grid-column-start: 1;
     grid-column-end: 2;
 }
-
-
 
 .trending-user-one::before,
 .trending-user-two::before,
