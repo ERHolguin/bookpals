@@ -129,7 +129,6 @@ li {
     width: 40px;
     height: 40px;    
     display: grid;
-
     place-self: end;
     margin-right: 10px;
 
@@ -139,6 +138,12 @@ li {
 }
 
 .profile::before {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+
     background-image: url(img/face-woman-profile.svg);
 
 }
@@ -455,16 +460,130 @@ li {
 
     background-color: #FFFFFF;
     border-radius: 10px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.trending-user-one {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
 
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    justify-content: center;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
-
-
 }
 
+.trending-user-details-one {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+    row-gap: 5px;
+}
+
+.display-name-one {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: end;
+}
+
+.user-trend-one {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: start;
+}
+
+/*.trending-user-two {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.trending-user-three {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.trending-user-four {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+.trending-user-one,
+.trending-user-two,
+.trending-user-three,
+.trending-user-four {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.trending-details {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+    row-gap: 5px;
+}
+  */  
+
+
+.trending-user-one::before {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+    
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-self: end;
+    justify-content: center;
+    margin-right: 10px; 
+}
+
+.trending-user-one::before {
+    /*must define alignment of bkg img in order to center full element*/
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+
+
+    background-image: url(img/face-man-profile.svg);
+    background-color: #17b7d9;
+    border: 7px solid #17b7d9;
+    border-radius: 100%;
+}
+
+
+
+/*
 .trending ul {
     grid-row-start: 1;
     grid-row-end: 2;
@@ -481,9 +600,9 @@ li {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    /*align-items: end; /*bring menu title down, on row to align with svg*/
+    /*align-items: end; bring menu title down, on row to align with svg
 }
-/*
+
 
 .trending li::before {
     content: '';
@@ -523,6 +642,7 @@ li {
 }
 */
 
+/*
 .display_name {
     grid-row-start: 1;
     grid-row-end: 2;
@@ -537,4 +657,4 @@ li {
     grid-column-start: 2;
     grid-column-end: 3;
     align-self: start;
-}
+}*/
