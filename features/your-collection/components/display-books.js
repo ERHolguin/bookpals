@@ -1,9 +1,6 @@
-/*const userBookshelf = document.getElementById("myBookShelf")*/
+let userBookShelf = document.getElementById("userBookShelf");
 
-const userBookshelf = [
-    "Grammatica de Uso Del espanol: teoria y pratica A1-B2 (Spanish edition",
-    "Pour Lire avec Plaisir"
-];
+/*userBookshelf = [];*/
 
 function Book(title, author) {
     this.author = author;
@@ -14,11 +11,26 @@ function Book(title, author) {
 
 };
 
+function createBookCard(card) {
+    for(let i = 0; i < card; i++) {
+        let card = document.createElement("div");
+        card.className = "book-card";
+        card.textContent = "";
+        userBookShelf.appendChild(card);
+    };
+};
+
+createBookCard(1);
+
+/*
 function addBookToUserBookshelf() {
     const book = new Book("Pride & Prejudice", "Jane Austin");
     const bookDetails = book.addBookDetails();
     return userBookshelf.push(bookDetails);
 };
 
-addBookToUserBookshelf();
-console.log(userBookshelf);
+
+/*addBookToUserBookshelf();*/
+/*console.log(userBookshelf); */
+
+
